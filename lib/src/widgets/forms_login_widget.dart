@@ -77,7 +77,8 @@ class FormsLoginWidget extends StatelessWidget {
               ),
               hintText: 'ejemplo@correo.com',
               labelText: 'Email',
-              counterText: snapshot.data
+              counterText: snapshot.data,
+              errorText: snapshot.error
             ),
             onChanged: bloc.changeEmail,
           ),
@@ -101,7 +102,8 @@ class FormsLoginWidget extends StatelessWidget {
                 color: Colors.deepPurple,
               ),
               labelText: 'Password',
-              counterText: snapshot.data
+              counterText: snapshot.data,
+              errorText: snapshot.error
             ),
             onChanged: bloc.changePassword,
           ),
