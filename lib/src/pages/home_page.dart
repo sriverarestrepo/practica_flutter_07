@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:validaciones_forms_practica/src/bloc/provider.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -7,10 +8,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = Provider.of(context);
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Home Page'),
+        title: Text('Home'),
+      ),
+      body: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+           Text('Email: ${bloc.email}'),
+           Divider(),
+           Text('Password: ${bloc.password}'),
+          ],
+        ),
       ),
      );
   }
