@@ -16,4 +16,6 @@ class Provider extends InheritedWidget{
    return context.dependOnInheritedWidgetOfExactType<Provider>().loginBloc;
   }
 
+  
+
 }
