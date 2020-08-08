@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'dart:math';
-
 class Validators {
   
   final validarPassword = StreamTransformer<String, String>.fromHandlers(
